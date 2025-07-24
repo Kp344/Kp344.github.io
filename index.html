@@ -1,91 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Kp344 - Personal Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #3d3b3b;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #282a2b;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-        h1 {
-            margin: 0;
-            font-size: 36px;
-        }
-        nav {
-            background-color: #464545;
-            text-align: center;
-            padding: 10px;
-        }
-        nav a {
-            text-decoration: none;
-            color: #fff;
-            margin: 10px;
-            font-size: 18px;
-        }
-        section {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #333232;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            color: #fff;
-        }
-        h2 {
-            font-size: 24px;
-        }
-        footer {
-            background-color: #282a2b;
-            color: #fff;
-            text-align: center;
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>guns.lol/kp344</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body, html { margin: 0; padding: 0; }
+    #navbar { transition: top 0.3s; }
+    .bg-cover-section {
+      background: url('sapphire.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+  </style>
 </head>
-<body>
-    <header>
-        <h1>Kp344</h1>
-        <p>Student</p>
-    </header>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#portfolio">Portfolio</a>
-    </nav>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            Welcome to my personal website.
-        </p>
-    </section>
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <p>
-            Here are some of the projects I've worked on:
-            <ul>
-                <li>
-                    <a href="/Croissant_Click/">Croissant Click</a>
-                </li>
-                <li>
-                    <a href="/Baguette_Click/">Baguette Click</a>
-                </li>
-            </ul>
-            Other projects can be found on my github profile, most of which will only work in a coder editor with a package manager, this is because most of them will use packages like Flask or SQLite.
-        </p>
-    </section>
-    <footer>
-        &copy; 2023 Kp344
-    </footer>
+<body class="text-white font-mono">
+
+  <!-- Background music with volume control -->
+  <audio id="bgm" autoplay loop>
+    <source src="Otonoke.mp3" type="audio/mpeg" />
+    Your browser does not support the audio tag.
+  </audio>
+
+  <!-- Volume Toggle Icon -->
+  <div class="absolute top-4 left-4 z-50">
+    <button onclick="toggleVolume()" id="volumeButton">
+      <i data-lucide="volume-2" class="text-white w-6 h-6"></i>
+    </button>
+  </div>
+
+  <!-- Sticky Nav -->
+  <nav id="navbar" class="fixed top-[-100px] left-0 w-full z-40 bg-black bg-opacity-90 p-4 border-b border-gray-700 text-center">
+    <a href="#about" class="mx-4 hover:underline">About</a>
+    <a href="#projects" class="mx-4 hover:underline">Projects</a>
+    <a href="#contact" class="mx-4 hover:underline">Contact</a>
+  </nav>
+
+  <!-- Splash Intro -->
+  <section class="h-screen w-full bg-cover-section flex flex-col items-center justify-center text-center relative">
+    <img src="bd89d40c-c6b7-49fb-b501-e1c6fd549512.png" class="w-32 h-32 rounded-full border-4 border-white mb-4" alt="pfp">
+    <h1 class="text-5xl md:text-7xl font-bold">guns.lol/kp344</h1>
+    <p class="text-gray-300 mt-2">security | roblox | scripts | no cringe</p>
+
+    <!-- Discord Widget -->
+    <iframe src="https://discord.com/widget?id=1141447532680620134&theme=dark" width="350" height="150" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+
+    <!-- Socials -->
+    <div class="mt-4 flex gap-6 text-lg">
+      <a href="https://github.com/Kp344/Kp344.github.io" class="hover:underline text-blue-400">GitHub</a>
+      <a href="https://www.roblox.com/users/990618162/profile" class="hover:underline text-green-400">Roblox</a>
+      <a href="https://youtube.com/@Kunj_Patel344" class="hover:underline text-red-400">YouTube</a>
+      <button onclick="copyDiscord()" class="hover:underline text-purple-400">Copy Discord</button>
+    </div>
+
+    <a href="#about" class="mt-16 animate-bounce text-3xl">⬇</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 px-6 bg-zinc-900 text-center">
+    <h2 class="text-4xl font-bold mb-4">About Me</h2>
+    <p class="text-gray-300 max-w-2xl mx-auto text-lg">
+      I'm kp344 — I make Roblox battlegrounds, custom tools, and mess with code to make better games and better security. Always cooking something new.
+    </p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 px-6 bg-zinc-800 text-center">
+    <h2 class="text-4xl font-bold mb-4">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 max-w-4xl mx-auto">
+      <div class="bg-zinc-700 p-6 rounded-xl shadow hover:scale-105 transition">
+        <h3 class="text-2xl font-bold">Project 1</h3>
+        <p class="text-gray-300">Coming soon...</p>
+      </div>
+      <div class="bg-zinc-700 p-6 rounded-xl shadow hover:scale-105 transition">
+        <h3 class="text-2xl font-bold">Project 2</h3>
+        <p class="text-gray-300">Coming soon...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 px-6 bg-zinc-900 text-center">
+    <h2 class="text-4xl font-bold mb-4">Contact</h2>
+    <p class="text-gray-300">DM me on Discord: <strong>kp344</strong></p>
+  </section>
+
+  <script>
+    // Navbar reveal on scroll
+    let lastScrollTop = 0;
+    window.addEventListener("scroll", function(){
+      let st = window.pageYOffset || document.documentElement.scrollTop;
+      const navbar = document.getElementById("navbar");
+      if (st > 100) {
+        navbar.style.top = "0px";
+      } else {
+        navbar.style.top = "-100px";
+      }
+      lastScrollTop = st <= 0 ? 0 : st;
+    });
+
+    // Discord copy
+    function copyDiscord() {
+      navigator.clipboard.writeText("kp344");
+      alert("Discord tag copied: kp344");
+    }
+
+    // Volume toggle
+    function toggleVolume() {
+      const audio = document.getElementById("bgm");
+      const button = document.getElementById("volumeButton");
+      const icon = button.querySelector("i");
+      if (audio.muted) {
+        audio.muted = false;
+        icon.setAttribute("data-lucide", "volume-2");
+      } else {
+        audio.muted = true;
+        icon.setAttribute("data-lucide", "volume-x");
+      }
+      lucide.createIcons();
+    }
+
+    lucide.createIcons();
+  </script>
 </body>
 </html>
