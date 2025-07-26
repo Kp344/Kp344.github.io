@@ -2,136 +2,112 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>guns.lol/kp344</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kunj Patel | guns.lol</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
-    html { scroll-behavior: smooth; }
-    body, html { margin: 0; padding: 0; }
-    #navbar { transition: top 0.3s; }
-    .bg-cover-section {
-      background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url('sapphire.jpg');
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-attachment: fixed;
-      background-size: cover;
+    ::-webkit-slider-thumb {
+      appearance: none;
+      height: 10px;
+      width: 10px;
+      border-radius: 9999px;
+      background: white;
+      cursor: pointer;
+    }
+    ::-webkit-slider-runnable-track {
+      background: #4B5563;
+      border-radius: 9999px;
     }
   </style>
 </head>
-<body class="text-white font-mono">
+<body class="bg-black text-white font-sans">
+  <!-- Background Music -->
+  <audio id="bgm" src="Otonoke.mp3" loop></audio>
 
-  <!-- Background music with volume control -->
-  <audio id="bgm" autoplay loop>
-    <source src="Otonoke.mp3" type="audio/mpeg" />
-    Your browser does not support the audio tag.
-  </audio>
-
-  <!-- Volume Toggle Icon -->
-  <div class="absolute top-4 left-4 z-50">
-    <button onclick="toggleVolume()" id="volumeButton" aria-label="Toggle volume">
-      <i data-lucide="volume-2" class="text-white w-6 h-6"></i>
-    </button>
+  <!-- Volume Control -->
+  <div class="absolute top-4 left-4 z-50 group">
+    <div class="relative flex flex-col items-center">
+      <button onclick="toggleMute()" id="volumeButton" aria-label="Toggle volume" class="p-1 bg-black bg-opacity-50 rounded-full hover:bg-opacity-75">
+        <i data-lucide="volume-2" class="text-white w-6 h-6"></i>
+      </button>
+      <input
+        type="range"
+        id="volumeSlider"
+        min="0"
+        max="1"
+        step="0.01"
+        value="1"
+        class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2 w-1 h-24 bg-gray-700 rounded-lg cursor-pointer appearance-none [&::-webkit-slider-thumb]:appearance-none"
+        oninput="adjustVolume(this.value)"
+      />
+    </div>
   </div>
 
-  <!-- Sticky Nav -->
-  <nav id="navbar" class="fixed top-[-100px] left-0 w-full z-40 bg-black bg-opacity-90 p-4 border-b border-gray-700 text-center">
-    <a href="#about" class="mx-4 hover:underline">About</a>
-    <a href="#projects" class="mx-4 hover:underline">Projects</a>
-    <a href="#contact" class="mx-4 hover:underline">Contact</a>
-  </nav>
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col items-center justify-center bg-cover bg-center" style="background-image: url('sapphire.jpg');">
+    <img src="bd89d40c-c6b7-49fb-b501-e1c6fd549512.png" alt="Profile" class="w-32 h-32 rounded-full border-4 border-white mb-4">
+    <h1 class="text-4xl font-bold mb-2">@Kunj_Patel344</h1>
 
-  <!-- Splash Intro -->
-  <section class="h-screen w-full bg-cover-section flex flex-col items-center justify-center text-center relative">
-    <div class="bg-black bg-opacity-60 rounded-lg p-8 flex flex-col items-center">
-      <img src="bd89d40c-c6b7-49fb-b501-e1c6fd549512.png" class="w-32 h-32 rounded-full border-4 border-white mb-4" alt="pfp" />
-      <h1 class="text-5xl md:text-7xl font-bold">Kp344</h1>
-      <p class="text-gray-300 mt-2">Soccer | Roblox | Coding | Just Chillin'</p>
+    <!-- Discord Widget -->
+    <iframe src="https://discord.com/widget?id=780802313823584277&theme=dark" width="300" height="200" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
 
-      <!-- Discord Widget -->
-      <iframe src="https://discord.com/widget?id=1141447532680620134&theme=dark" width="350" height="150" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" class="mt-6 rounded-md overflow-hidden"></iframe>
-
-      <!-- Socials as icon buttons -->
-      <div class="mt-4 flex gap-6 text-lg">
-        <a href="https://github.com/Kp344/Kp344.github.io" target="_blank" rel="noopener noreferrer" class="p-3 rounded-full bg-gray-800 hover:bg-gray-700 transition" aria-label="GitHub">
-          <i data-lucide="github" class="w-6 h-6 text-blue-400"></i>
-        </a>
-        <a href="https://www.roblox.com/users/990618162/profile" target="_blank" rel="noopener noreferrer" class="p-3 rounded-full bg-gray-800 hover:bg-gray-700 transition" aria-label="Roblox">
-          <i data-lucide="controller" class="w-6 h-6 text-green-400"></i>
-        </a>
-        <a href="https://youtube.com/@Kunj_Patel344" target="_blank" rel="noopener noreferrer" class="p-3 rounded-full bg-gray-800 hover:bg-gray-700 transition" aria-label="YouTube">
-          <i data-lucide="youtube" class="w-6 h-6 text-red-500"></i>
-        </a>
-        <a href="https://discord.com/users/780802313823584277" target="_blank" rel="noopener noreferrer" class="p-3 rounded-full bg-gray-800 hover:bg-gray-700 transition" aria-label="Discord">
-          <i data-lucide="discord" class="w-6 h-6 text-purple-400"></i>
-        </a>
-      </div>
-
-      <a href="#about" class="mt-16 animate-bounce text-3xl" aria-label="Scroll Down">⬇</a>
+    <!-- Social Links -->
+    <div class="flex space-x-4 mt-4">
+      <a href="https://discord.com/users/780802313823584277" target="_blank" aria-label="Discord">
+        <i data-lucide="message-circle" class="w-6 h-6"></i>
+      </a>
+      <a href="https://github.com/Kp344/Kp344.github.io" target="_blank" aria-label="GitHub">
+        <i data-lucide="github" class="w-6 h-6"></i>
+      </a>
+      <a href="https://www.roblox.com/users/990618162/profile" target="_blank" aria-label="Roblox">
+        <i data-lucide="gamepad-2" class="w-6 h-6"></i>
+      </a>
+      <a href="https://www.youtube.com/@Kunj_Patel344" target="_blank" aria-label="YouTube">
+        <i data-lucide="youtube" class="w-6 h-6"></i>
+      </a>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-20 px-6 bg-zinc-900 text-center">
-    <h2 class="text-4xl font-bold mb-4">About Me</h2>
-    <p class="text-gray-300 max-w-2xl mx-auto text-lg">
-      I'm Kp344
-    </p>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="py-20 px-6 bg-zinc-800 text-center">
-    <h2 class="text-4xl font-bold mb-4">Projects</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 max-w-4xl mx-auto">
-      <div class="bg-zinc-700 p-6 rounded-xl shadow hover:scale-105 transition">
-        <h3 class="text-2xl font-bold">Project 1</h3>
-        <p class="text-gray-300">Coming soon...</p>
-      </div>
-      <div class="bg-zinc-700 p-6 rounded-xl shadow hover:scale-105 transition">
-        <h3 class="text-2xl font-bold">Project 2</h3>
-        <p class="text-gray-300">Coming soon...</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="py-20 px-6 bg-zinc-900 text-center">
-    <h2 class="text-4xl font-bold mb-4">Contact</h2>
-    <p class="text-gray-300">DM me on Discord: <strong>Kp344</strong></p>
+  <!-- Info Section -->
+  <section class="py-20 px-8 bg-gray-900">
+    <h2 class="text-3xl font-bold mb-6">About Me</h2>
+    <p class="mb-4">This section is under construction. Add your bio or personal info here.</p>
+    <h2 class="text-3xl font-bold mt-12 mb-6">Projects</h2>
+    <ul class="space-y-2">
+      <li>🚧 Project Placeholder 1</li>
+      <li>🚧 Project Placeholder 2</li>
+      <li>🚧 Project Placeholder 3</li>
+    </ul>
   </section>
 
   <script>
-    // Navbar reveal on scroll
-    let lastScrollTop = 0;
-    window.addEventListener("scroll", function(){
-      let st = window.pageYOffset || document.documentElement.scrollTop;
-      const navbar = document.getElementById("navbar");
-      if (st > 100) {
-        navbar.style.top = "0px";
-      } else {
-        navbar.style.top = "-100px";
-      }
-      lastScrollTop = st <= 0 ? 0 : st;
+    document.addEventListener("DOMContentLoaded", () => {
+      lucide.createIcons();
+      const audio = document.getElementById("bgm");
+      document.body.addEventListener("click", () => {
+        if (audio.paused) audio.play();
+      }, { once: true });
     });
 
-    // Volume toggle
-    function toggleVolume() {
+    function toggleMute() {
       const audio = document.getElementById("bgm");
-      const button = document.getElementById("volumeButton");
-      const icon = button.querySelector("i");
-      if (audio.muted) {
-        audio.muted = false;
-        icon.setAttribute("data-lucide", "volume-2");
-      } else {
-        audio.muted = true;
-        icon.setAttribute("data-lucide", "volume-x");
-      }
+      const icon = document.querySelector("#volumeButton i");
+      audio.muted = !audio.muted;
+      icon.setAttribute("data-lucide", audio.muted ? "volume-x" : "volume-2");
       lucide.createIcons();
     }
 
-    lucide.createIcons();
+    function adjustVolume(value) {
+      const audio = document.getElementById("bgm");
+      audio.volume = parseFloat(value);
+      audio.muted = value <= 0;
+      const icon = document.querySelector("#volumeButton i");
+      icon.setAttribute("data-lucide",
+        audio.muted ? "volume-x" : value < 0.4 ? "volume-1" : "volume-2"
+      );
+      lucide.createIcons();
+    }
   </script>
 </body>
 </html>
