@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Class Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Lora:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #c97a5a;
+            --primary-light: #d4a574;
+            --accent: #7eb3a1;
+            --background: #faf8f6;
+            --card-bg: #ffffff;
+            --text-dark: #3d3d3d;
+            --text-light: #7a7a7a;
+            --border-color: #e8dfd5;
+            --input-bg: #f5f1ed;
+            --muted-bg: #e8ddf5;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 2rem;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #fef3e2 0%, #fff9f0 50%, #f0f8f5 100%);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(212, 165, 116, 0.3) 0%, transparent 70%);
+            border-radius: 50%;
+            opacity: 0.4;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(201, 122, 90, 0.25) 0%, transparent 70%);
+            border-radius: 50%;
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: white;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+            line-height: 1.2;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 0.5rem;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero .tagline {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .scroll-indicator {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            cursor: pointer;
+            animation: bounce 2s infinite;
+            border: none;
+            background: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .scroll-indicator svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Main Content */
+        main {
+            padding: 3rem 0;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        /* Cards */
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 0.65rem;
+            padding: 2rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+        }
+
+        /* Student Information */
+        .student-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .student-info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .info-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .info-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .info-value {
+            font-size: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        /* Learning Goals Grid */
+        .goals-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .goals-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .goal-card {
+            background-color: var(--card-bg);
+            border-radius: 0.65rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+            display: flex;
+            gap: 1rem;
+        }
+
+        .goal-icon {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            color: var(--primary);
+        }
+
+        .goal-content h3 {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .goal-content p {
+            font-size: 0.95rem;
+            color: rgba(61, 61, 61, 0.8);
+            line-height: 1.5;
+        }
+
+        /* Evidence Sections */
+        .evidence-section {
+            margin-bottom: 3rem;
+        }
+
+        .evidence-title {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .evidence-subtitle {
+            font-size: 1rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .subsection {
+            margin-bottom: 2rem;
+        }
+
+        .subsection-title {
+            font-size: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .question {
+            font-size: 0.95rem;
+            color: rgba(61, 61, 61, 0.7);
+            margin-bottom: 0.75rem;
+            font-weight: 500;
+        }
+
+        .answer {
+            font-size: 0.95rem;
+            color: rgba(61, 61, 61, 0.8);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .image-link {
+            display: inline-block;
+            border-radius: 0.65rem;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .image-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-link img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            display: block;
+        }
+
+        /* Conference Section */
+        .conference-checklist {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .conference-checklist li {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+            color: rgba(61, 61, 61, 0.8);
+        }
+
+        .conference-checklist li::before {
+            content: '•';
+            color: var(--primary);
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .conference-divider {
+            border-top: 1px solid var(--border-color);
+            margin: 2rem 0;
+            padding-top: 2rem;
+        }
+
+        .conference-detail {
+            margin-bottom: 1.5rem;
+        }
+
+        .conference-detail-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .conference-detail-value {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgba(232, 221, 213, 0.3);
+            border-top: 1px solid var(--border-color);
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-top: 3rem;
+        }
+
+        /* Responsive Typography */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .subsection-title {
+                font-size: 1.3rem;
+            }
+
+            .card {
+                padding: 1.5rem;
+            }
+        }
+
+        @media print {
+            .hero {
+                min-height: auto;
+                padding: 2rem 0;
+            }
+            .scroll-indicator {
+                display: none;
+            }
+            body {
+                background: white;
+            }
+            .card {
+                page-break-inside: avoid;
+            }
+            section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>English Class Portfolio</h1>
+            <p class="subtitle">Grade 9 Learning Journey</p>
+            <p class="tagline">Celebrating Growth, Reflection, and Achievement</p>
+            <button class="scroll-indicator" onclick="scrollToSection('student-info')">
+                <span>Explore</span>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- Student Information -->
+            <section id="student-info">
+                <h2 class="section-title">Student Information</h2>
+                <div class="card">
+                    <div class="student-info-grid">
+                        <div>
+                            <div class="info-item">
+                                <div class="info-label">Student Name</div>
+                                <div class="info-value">Kunj Patel</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Student Number</div>
+                                <div class="info-value">843457</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="info-item">
+                                <div class="info-label">Course</div>
+                                <div class="info-value">EN1W0-6</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Evaluation Date</div>
+                                <div class="info-value">January 2025</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ontario Learning Goals -->
+            <section id="learning-goals">
+                <h2 class="section-title">Ontario Learning Goals</h2>
+                <p class="section-subtitle">This portfolio demonstrates achievement across four key learning goals</p>
+                <div class="goals-grid">
+                    <div class="goal-card">
+                        <svg class="goal-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C6.5 6.253 2 10.998 2 17s4.5 10.747 10 10.747c5.5 0 10-4.998 10-10.747S17.5 6.253 12 6.253z"></path>
+                        </svg>
+                        <div class="goal-content">
+                            <h3>Reading & Comprehension</h3>
+                            <p>Demonstrating critical thinking and deep understanding of texts while understanding how transferable skills apply in various contexts.</p>
+                        </div>
+                    </div>
+
+                    <div class="goal-card">
+                        <svg class="goal-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path>
+                        </svg>
+                        <div class="goal-content">
+                            <h3>Writing & Communication</h3>
+                            <p>Crafting clear, purposeful writing across multiple genres and presentations.</p>
+                        </div>
+                    </div>
+
+                    <div class="goal-card">
+                        <svg class="goal-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <div class="goal-content">
+                            <h3>Critical Thinking</h3>
+                            <p>Analyzing information, making connections, and supporting ideas with growth.</p>
+                        </div>
+                    </div>
+
+                    <div class="goal-card">
+                        <svg class="goal-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-2a6 6 0 0112 0v2zm0 0h6v-2a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                        <div class="goal-content">
+                            <h3>Collaboration & Growth</h3>
+                            <p>Working effectively with others and demonstrating commitment to continuous learning.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Evidence #1 -->
+            <section class="evidence-section" id="evidence-1">
+                <h2 class="evidence-title">Evidence #1</h2>
+                <p class="evidence-subtitle">Concept, Idea, or Topic with Most Impact</p>
+                <div class="card">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Concept or Topic</h3>
+                        <p class="question">What concept or topic had the most impact on your learning?</p>
+                        <p class="answer">The concept of narrative perspective fundamentally changed how I approach literature analysis. By studying how different authors use point of view to shape reader understanding, I learned to critically examine the relationship between narrator and audience. This skill has become essential in my writing, allowing me to make deliberate choices about voice and perspective to enhance my storytelling.</p>
+                    </div>
+
+                    <div class="subsection">
+                        <h3 class="subsection-title">Course Resource</h3>
+                        <p class="question">Click the image below to view the course resource:</p>
+                        <a href="https://example.com/resource1" target="_blank" class="image-link">
+                            <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=500&h=400&fit=crop" alt="Course Resource - Literature and Narrative">
+                        </a>
+                    </div>
+
+                    <div class="subsection">
+                        <h3 class="subsection-title">Learning Reflection</h3>
+                        <div>
+                            <p class="question">What did you learn?</p>
+                            <p class="answer">I learned that narrative perspective is not merely a technical element but a powerful tool for meaning-making. Understanding unreliable narrators, stream of consciousness, and third-person omniscience deepened my appreciation for how authors craft their messages. I also discovered that these techniques apply beyond literature to how we communicate in everyday contexts.</p>
+                        </div>
+                        <div style="margin-top: 1.5rem;">
+                            <p class="question">How did this learning influence your perspectives?</p>
+                            <p class="answer">This learning transformed my perspective on storytelling and communication. I now recognize that every narrative choice carries weight and intention. I've become more conscious of how media, news, and even conversations are shaped by the perspective from which they're presented. This awareness has made me a more critical consumer of information and a more intentional communicator.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Evidence #2 -->
+            <section class="evidence-section" id="evidence-2">
+                <h2 class="evidence-title">Evidence #2</h2>
+                <p class="evidence-subtitle">Demonstrating Transferable Skills</p>
+                <div class="card">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Your Work</h3>
+                        <p class="question">What piece of work demonstrates your transferable skills?</p>
+                        <p class="answer">I created a multimedia presentation analyzing the evolution of storytelling across different media platforms. This project required me to research, synthesize information from multiple sources, organize complex ideas, and present findings in an engaging visual format. The work demonstrates research, critical analysis, organization, and presentation skills that extend far beyond English class.</p>
+                    </div>
+
+                    <div class="subsection">
+                        <h3 class="subsection-title">Slideshow Presentation</h3>
+                        <p class="question">Click the image below to view your slideshow:</p>
+                        <a href="https://example.com/presentation" target="_blank" class="image-link">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=400&fit=crop" alt="Multimedia Presentation">
+                        </a>
+                    </div>
+
+                    <div class="subsection">
+                        <h3 class="subsection-title">Transferable Skills</h3>
+                        <div>
+                            <p class="question">Which transferable skills does this work demonstrate?</p>
+                            <p class="answer"><strong>Research Skills:</strong> I gathered information from academic sources, documentaries, and interviews. <strong>Critical Analysis:</strong> I evaluated how different media platforms tell stories differently. <strong>Organization:</strong> I structured complex information into a logical narrative flow. <strong>Communication:</strong> I presented findings clearly to an audience. <strong>Digital Literacy:</strong> I used presentation software and multimedia tools effectively.</p>
+                        </div>
+                        <div style="margin-top: 1.5rem;">
+                            <p class="question">How could you apply these skills in another context?</p>
+                            <p class="answer">These skills are directly applicable to university coursework across disciplines, professional presentations in any field, and personal projects. In business contexts, research and presentation skills are essential for reports and pitches. In science, these skills support lab reports and conference presentations. In journalism or communications, they're fundamental. Even in personal contexts, these skills help me communicate ideas effectively to friends, family, and online communities.</p>
+                        </div>
+                    </div>
+
+                    <div class="subsection">
+                        <h3 class="subsection-title">Growth Goal</h3>
+                        <div>
+                            <p class="question">Which transferable skill would you like to improve?</p>
+                            <p class="answer">I want to strengthen my collaborative communication skills. While I'm comfortable presenting to audiences, I recognize I could be more effective at working in teams, particularly in giving and receiving constructive feedback and building on others' ideas in real-time.</p>
+                        </div>
+                        <div style="margin-top: 1.5rem;">
+                            <p class="question">How will you work on this skill?</p>
+                            <p class="answer">I plan to actively participate in group projects next semester, specifically focusing on listening to teammates' perspectives before offering my own. I'll practice asking clarifying questions and building on ideas rather than redirecting conversations. I'll also seek feedback from group members about my collaboration style and work to implement their suggestions.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Evidence #3 -->
+            <section class="evidence-section" id="evidence-3">
+                <h2 class="evidence-title">Evidence #3</h2>
+                <p class="evidence-subtitle">Growth and Development</p>
+                <div class="card">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Area of Greatest Growth</h3>
+                        <p class="question">In what area have you grown the most?</p>
+                        <p class="answer">My greatest growth has been in analytical writing and critical thinking. At the beginning of the semester, my essays were more descriptive than analytical. I've learned to move beyond summarizing texts to deeply examining their themes, techniques, and implications. I now construct arguments with clear thesis statements, supporting evidence, and thoughtful analysis.</p>
+                    </div>
+
+                    <div class="subsection">
+                        <h3 class="subsection-title">SOP Writing Evidence</h3>
+                        <p class="question">Click the image below to view your SOP writing:</p>
+                        <a href="https://example.com/sop" target="_blank" class="image-link">
+                            <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=500&h=400&fit=crop" alt="Statement of Purpose Writing">
+                        </a>
+                    </div>
+
+                    <div class="subsection">
+                        <h3 class="subsection-title">Evidence of Growth</h3>
+                        <div>
+                            <p class="question">What evidence demonstrates this growth?</p>
+                            <p class="answer">Comparing my early essays to recent work shows clear progression. My first analytical essay received feedback about needing stronger topic sentences and more textual evidence. My most recent essay demonstrates improved structure, more sophisticated analysis, and effective integration of quotations. Teacher feedback has shifted from "develop your ideas more" to "excellent analysis of symbolism." My grades have improved from B- to A-, reflecting this growth.</p>
+                        </div>
+                        <div style="margin-top: 1.5rem;">
+                            <p class="question">What positive impact has this growth had?</p>
+                            <p class="answer">This growth has increased my confidence as a writer and thinker. I now approach texts with curiosity rather than anxiety. I enjoy the process of uncovering deeper meanings and constructing arguments. This skill has improved my performance in other subjects where analytical writing is required. More importantly, I've developed a genuine love for literature and critical thinking that extends beyond grades.</p>
+                        </div>
+                    </div>
+
+                    <div class="subsection">
+                        <h3 class="subsection-title">Continued Growth</h3>
+                        <div>
+                            <p class="question">What do you need to do to continue growing?</p>
+                            <p class="answer">To continue growing, I need to expand my reading beyond assigned texts, engage with diverse literary voices and perspectives, and practice writing in different genres and styles. I should also seek more feedback from peers and teachers to identify remaining areas for improvement. Finally, I want to develop stronger editing skills to refine my work further.</p>
+                        </div>
+                        <div style="margin-top: 1.5rem;">
+                            <p class="question">What are your next steps?</p>
+                            <p class="answer">My action plan includes: (1) Reading one book outside the curriculum each month, (2) Starting a writing journal to practice different styles, (3) Joining the school's writing club to get peer feedback, (4) Meeting with my teacher monthly to discuss progress and set new goals, (5) Revising and resubmitting previous essays to practice editing skills, and (6) Exploring how literary analysis applies to other disciplines.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Conference Information -->
+            <section id="conference">
+                <h2 class="section-title">Conference Information</h2>
+                <div class="card">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Preparing for Your Conference</h3>
+                        <ul class="conference-checklist">
+                            <li>Review all three evidence sections before your conference</li>
+                            <li>Be prepared to discuss your learning journey and growth</li>
+                            <li>Have your supporting documents ready to share</li>
+                            <li>Think about questions you have for your teacher</li>
+                        </ul>
+                    </div>
+
+                    <div class="conference-divider"></div>
+
+                    <div class="subsection">
+                        <h3 class="subsection-title">Conference Details</h3>
+                        <div class="conference-detail">
+                            <div class="conference-detail-label">Date</div>
+                            <div class="conference-detail-value">January 24, 2025</div>
+                        </div>
+                        <div class="conference-detail">
+                            <div class="conference-detail-label">Time</div>
+                            <div class="conference-detail-value">2:00 PM - 2:30 PM</div>
+                        </div>
+                        <div class="conference-detail">
+                            <div class="conference-detail-label">Location</div>
+                            <div class="conference-detail-value">Room 215 - English Department</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 English Class Portfolio | Grade 9 | 2026</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth scroll to section
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Print functionality
+        function printPortfolio() {
+            window.print();
+        }
+
+        // Add keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            // Ctrl+P or Cmd+P for print
+            if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                e.preventDefault();
+                printPortfolio();
+            }
+        });
+    </script>
+</body>
+</html>
