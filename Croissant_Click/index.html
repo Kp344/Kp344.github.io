@@ -1,122 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Croissant Clicker</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: 'IBM Plex Mono', monospace;
-      background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #f0f0f0;
-    }
-    
-    .container {
-      text-align: center;
-      padding: 20px;
-    }
-    
-    h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
-      color: #00d9ff;
-      text-shadow: 0 0 10px #00d9ff;
-    }
-    
-    .score {
-      font-size: 1.5em;
-      margin-bottom: 30px;
-      color: #ff006e;
-    }
-    
-    .clicker-btn {
-      width: 200px;
-      height: 200px;
-      font-size: 100px;
-      border: 3px solid #00d9ff;
-      background: rgba(0, 217, 255, 0.1);
-      border-radius: 20px;
-      cursor: pointer;
-      transition: all 0.2s;
-      margin: 20px auto;
-      box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
-    }
-    
-    .clicker-btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 30px rgba(0, 217, 255, 0.6);
-    }
-    
-    .clicker-btn:active {
-      transform: scale(0.95);
-    }
-    
-    .back-btn {
-      margin-top: 30px;
-      padding: 10px 20px;
-      background: #00d9ff;
-      color: #0a0e27;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-family: 'IBM Plex Mono', monospace;
-      font-weight: bold;
-      transition: all 0.3s;
-    }
-    
-    .back-btn:hover {
-      background: #ff006e;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Croissant Clicker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #282a2b; /* Change this to the color of your choice */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        #croissant-container {
+            margin-top: 100px;
+            position: relative; /* Set the position to relative */
+        }
+
+        #croissant {
+            width: 200px;
+            cursor: pointer;
+            transition: transform 0.2s; /* Added transform transition */
+        }
+
+        #croissant:hover {
+            transform: scale(1.1);
+            transition: transform 0.2s; /* Added transform transition on hover */
+        }
+
+        #click-counter {
+            font-size: 24px;
+            color: #fff;
+        }
+
+        .flying-croissant {
+            position: absolute;
+            animation: flyAndSpin 4s linear forwards;
+            width: 100px; /* Make the flying croissant smaller */
+        }
+
+        @keyframes flyAndSpin {
+            0% {
+                transform: translate(0, 270px) rotate(0); /* Start from the bottom */
+            }
+            100% {
+                transform: translate(0, -200px) rotate(360deg);
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>🥐 Croissant Clicker</h1>
-    <div class="score">Croissants: <span id="score">0</span></div>
-    <button class="clicker-btn" id="clicker">🥐</button>
-    <br>
-    <button class="back-btn" onclick="window.location.href='/'">Back to Portfolio</button>
-  </div>
+    <div id="croissant-container">
+        <img id="croissant" src="croissant.png" alt="Croissant Image">
+        <p id="click-counter">Click Count: <span id="clicks">0</span></p>
+    </div>
+    <script>
+        const croissantContainer = document.getElementById("croissant-container");
+        const croissant = document.getElementById("croissant");
+        const clickCounter = document.getElementById("clicks");
+        let clickCount = 0;
 
-  <script>
-    let score = 0;
-    const scoreDisplay = document.getElementById('score');
-    const clicker = document.getElementById('clicker');
+        croissant.addEventListener("click", () => {
+            clickCount++;
+            clickCounter.textContent = clickCount;
 
-    clicker.addEventListener('click', function() {
-      score++;
-      scoreDisplay.textContent = score;
-      
-      // Add animation
-      this.style.transform = 'scale(0.9)';
-      setTimeout(() => {
-        this.style.transform = 'scale(1)';
-      }, 100);
-    });
+            // Create a new flying croissant
+            const flyingCroissant = document.createElement("img");
+            flyingCroissant.src = "croissant.png";
+            flyingCroissant.alt = "Flying Croissant";
+            flyingCroissant.classList.add("flying-croissant");
+            flyingCroissant.style.left = `${Math.floor(Math.random() * croissantContainer.clientWidth - 100)}px`; /* Adjusted for smaller croissant */
 
-    // Load saved score
-    window.addEventListener('load', function() {
-      const saved = localStorage.getItem('croissantScore');
-      if (saved) {
-        score = parseInt(saved);
-        scoreDisplay.textContent = score;
-      }
-    });
+            // Append the flying croissant to the container
+            croissantContainer.appendChild(flyingCroissant);
 
-    // Save score every second
-    setInterval(() => {
-      localStorage.setItem('croissantScore', score);
-    }, 1000);
-  </script>
+            // Create a new audio element and play it
+            const audio = new Audio("croissant_audio.mp3");
+            audio.play();
+
+            // Remove the flying croissant after the animation
+            flyingCroissant.addEventListener("animationend", () => {
+                croissantContainer.removeChild(flyingCroissant);
+            });
+        });
+    </script>
 </body>
 </html>
+
