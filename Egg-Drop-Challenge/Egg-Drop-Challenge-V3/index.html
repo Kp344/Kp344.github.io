@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Egg Drop Challenge</title>
+<meta name="description" content="A SPICE design report on building a package that keeps an egg safe from a second-floor drop.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥚</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bungee&family=Archivo+Black&family=Oswald:wght@600;700&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#content">Skip to content</a>
+
+<!-- ============ TOP BAR / SPICE NAV ============ -->
+<header class="topbar" id="topbar">
+  <div class="topbar-inner">
+    <button class="brand" id="brand" title="Tap the egg three times to open the editor">
+      <span class="brand-egg" aria-hidden="true">
+        <svg viewBox="0 0 60 48" width="46" height="38">
+          <path class="white" d="M10 24c-6 2-9 8-6 13s10 7 15 5c4-2 7-1 11 1 6 3 14 2 17-3s1-11-3-14c-3-2-4-5-4-9 0-7-6-12-13-11-6 1-9 5-10 10-1 4-3 7-7 8z"/>
+          <circle class="yolk" cx="27" cy="22" r="8"/>
+          <circle class="glint" cx="24" cy="19" r="2.2"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-title" data-bind="meta.title">The Egg Drop Challenge</span>
+        <span class="brand-sub" data-bind="meta.authors">by Aayush and Kunj</span>
+      </span>
+    </button>
+
+    <nav class="spice" id="spice" aria-label="Report sections"></nav>
+
+  </div>
+  <div class="crack-line" aria-hidden="true"></div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-art" aria-hidden="true">
+    <svg viewBox="0 0 320 300" class="hero-egg">
+      <g class="chute">
+        <path d="M60 78c0-42 34-64 100-64s100 22 100 64z" class="canopy"/>
+        <path d="M60 78c14 10 26 12 34 11M160 14c-8 20-10 55-10 75M260 78c-14 10-26 12-34 11" class="canopy-fold"/>
+        <path d="M94 89 148 168M160 89 160 168M226 89 172 168" class="lines"/>
+      </g>
+      <g class="capsule">
+        <rect x="118" y="168" width="84" height="76" rx="10" class="shell"/>
+        <rect x="128" y="178" width="64" height="56" rx="7" class="shell-in"/>
+        <ellipse cx="160" cy="206" rx="19" ry="23" class="egg-body"/>
+        <circle cx="153" cy="198" r="4.5" class="egg-glint"/>
+      </g>
+      <path d="M40 268h240" class="ground"/>
+    </svg>
+  </div>
+  <div class="hero-copy">
+    <p class="hero-kicker" data-bind="meta.kicker">Grade 8 design challenge</p>
+    <h1 class="hero-title"><span data-bind="meta.title">The Egg Drop Challenge</span></h1>
+    <p class="hero-lede" data-bind="meta.lede">One raw egg. Three sheets of cardstock. One arm's length of tape. A drop from the second floor.</p>
+    <div class="hero-actions">
+      <a class="btn btn-solid" href="#s">Start at the situation</a>
+      <a class="btn btn-ghost" href="#c">Jump to the build</a>
+    </div>
+  </div>
+</section>
+
+<main id="content"></main>
+
+<footer class="foot">
+  <p data-bind="meta.footer">Built for the SPICE design process — situation, problem, investigation, construction, evaluation.</p>
+</footer>
+
+<!-- ============ ADMIN PANEL ============ -->
+<aside class="admin" id="admin" hidden aria-label="Site editor">
+  <header class="admin-head">
+    <h2>Site editor</h2>
+    <button class="icon-btn" id="adminClose" title="Close editor">✕</button>
+  </header>
+
+  <div class="admin-tabs" role="tablist">
+    <button class="tab is-on" data-tab="structure">Structure</button>
+    <button class="tab" data-tab="look">Look</button>
+    <button class="tab" data-tab="data">Save &amp; load</button>
+  </div>
+
+  <div class="admin-body">
+    <section class="tabpane is-on" data-pane="structure">
+      <label class="switch">
+        <input type="checkbox" id="liveEdit" checked>
+        <span>Edit text straight on the page</span>
+      </label>
+      <p class="hint">Drag the &#10495; handles below to rearrange sections, parts and blocks — a block can be dragged into a different part too. With editing on, click any heading, paragraph, bullet or table cell on the page and type over it. Small &#9650; &#9660; &#10005; buttons show up next to every item so you can move or drop it.</p>
+
+      <details class="drawer" open>
+        <summary>Title, authors and intro</summary>
+        <div id="metaFields" class="fields"></div>
+      </details>
+
+      <details class="drawer" open>
+        <summary>Sections and blocks</summary>
+        <div id="tree" class="tree"></div>
+        <button class="btn btn-solid full" id="addSection">Add a section</button>
+      </details>
+    </section>
+
+    <section class="tabpane" data-pane="look">
+      <div id="themeFields" class="fields"></div>
+      <label class="switch">
+        <input type="checkbox" id="wobble" checked>
+        <span>Play the falling-egg animation</span>
+      </label>
+      <button class="btn btn-ghost full" id="resetTheme">Reset the colours</button>
+    </section>
+
+    <section class="tabpane" data-pane="data">
+      <p class="hint">Your edits live in this browser. To put them on GitHub, export and replace the content block in <code>script.js</code>, or drop the JSON file beside the site as <code>content.json</code>.</p>
+      <button class="btn btn-solid full" id="exportJson">Download content.json</button>
+      <button class="btn btn-ghost full" id="copyJs">Copy content for script.js</button>
+      <label class="btn btn-ghost full file">
+        Load a content.json
+        <input type="file" id="importJson" accept="application/json">
+      </label>
+      <button class="btn btn-danger full" id="resetAll">Throw out my edits</button>
+    </section>
+  </div>
+</aside>
+
+<button class="edit-pill" id="editPill">Done editing</button>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
