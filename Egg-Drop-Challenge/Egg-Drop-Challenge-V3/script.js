@@ -11,7 +11,7 @@ const DEFAULT_CONTENT = {
     title: "The Egg Drop Challenge",
     authors: "by Aayush and Kunj",
     kicker: "A SPICE design report",
-    lede: "One boiled egg. Three sheets of cardstock. One arm's length of tape. A drop from the second floor.",
+    lede: "One boiled egg. Three sheets of cardstock. One strip of tape the length of Ms.Navea's arm. A drop from the second floor.",
     footer: "Built for the SPICE design process — situation, problem, investigation, construction, evaluation."
   },
 
