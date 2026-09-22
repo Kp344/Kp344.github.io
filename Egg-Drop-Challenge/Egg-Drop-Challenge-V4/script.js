@@ -137,14 +137,50 @@ const DEFAULT_CONTENT = {
             {
               "type": "image",
               "src": "",
-              "alt": "Aayush's sketch",
-              "caption": "Aayush: parachute over a deep cardstock bucket."
+              "alt": "Kunj's sketch",
+              "caption": "Kunj: 11 inch canopy over a narrow cone, 8.5 inches tall."
             },
             {
               "type": "image",
               "src": "",
               "alt": "Kunj's sketch",
               "caption": "Kunj: 11 inch canopy over a narrow cone, 8.5 inches tall."
+            },
+            {
+              "type": "image",
+              "src": "",
+              "alt": "Kunj's sketch",
+              "caption": "Kunj: 11 inch canopy over a narrow cone, 8.5 inches tall."
+            },
+            {
+              "type": "image",
+              "src": "",
+              "alt": "Kunj's sketch",
+              "caption": "Kunj: 11 inch canopy over a narrow cone, 8.5 inches tall."
+            },
+            {
+              "type": "image",
+              "src": "",
+              "alt": "Aayush's sketch",
+              "caption": "Aayush: parachute over a deep cardstock bucket."
+            },
+            {
+              "type": "image",
+              "src": "",
+              "alt": "Aayush's sketch",
+              "caption": "Aayush: parachute over a deep cardstock bucket."
+            },
+            {
+              "type": "image",
+              "src": "",
+              "alt": "Aayush's sketch",
+              "caption": "Aayush: parachute over a deep cardstock bucket."
+            },
+            {
+              "type": "image",
+              "src": "",
+              "alt": "Aayush's sketch",
+              "caption": "Aayush: parachute over a deep cardstock bucket."
             },
             {
               "type": "list",
