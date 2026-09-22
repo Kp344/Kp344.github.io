@@ -1,60 +1,55 @@
-/* =========================================================
-   The Egg Drop Challenge — site logic
-   -----------------------------------------------------
-   Everything on the page is drawn from the object below.
-   Change it here, or open the editor on the page
-   ("Edit site" button, or click the egg three times).
-   ========================================================= */
-
 const DEFAULT_CONTENT = {
-  meta: {
-    title: "The Egg Drop Challenge",
-    authors: "by Aayush and Kunj",
-    kicker: "A SPICE design report",
-    lede: "One raw egg. Three sheets of cardstock. One arm's length of tape. A drop from the second floor.",
-    footer: "Built for the SPICE design process — situation, problem, investigation, construction, evaluation."
+  "meta": {
+    "title": "The Egg Drop Challenge",
+    "authors": "by Aayush and Kunj",
+    "kicker": "A SPICE design report",
+    "lede": "One boiled egg. Three sheets of cardstock. One arm's length of tape. A drop from the second floor.",
+    "footer": "Built for the SPICE design process — situation, problem, investigation, construction, evaluation."
   },
-
-  theme: {
-    paper: "#FBD79B",
-    grid:  "#E0A24A",
-    cream: "#FDF6E3",
-    ink:   "#2A1A0C",
-    yolk:  "#FFC220",
-    shell: "#A9681B",
-    display: "Anton",
-    gridSize: 28
+  "theme": {
+    "paper": "#FBD79B",
+    "grid": "#E0A24A",
+    "cream": "#FDF6E3",
+    "ink": "#2A1A0C",
+    "yolk": "#FFC220",
+    "shell": "#A9681B",
+    "display": "Bungee",
+    "gridSize": 28
   },
-
-  sections: [
+  "sections": [
     {
-      letter: "S",
-      name: "Situation",
-      blurb: "What was the challenge?",
-      subs: [
+      "letter": "S",
+      "name": "Situation",
+      "blurb": "What was the challenge?",
+      "subs": [
         {
-          title: "The scenario",
-          cols: 1,
-          blocks: [
-            { type: "text", text: "To design and create a package that will keep an egg safe from the impact of a drop from the second floor." },
-            { type: "text", text: "The package also has to sell itself. An investor should look at it and want to back it, so it has to be tidy, original, and obvious to use." }
+          "title": "The Situation",
+          "cols": 1,
+          "blocks": [
+            {
+              "type": "text",
+              "text": "To design and create a package that will keep an egg safe from the impact of a drop from the second floor."
+            },
+            {
+              "type": "text",
+              "text": "The package also has to sell itself. An investor should look at it and want to back it, so it has to be tidy, original, and obvious to use."
+            }
           ]
         }
       ]
     },
-
     {
-      letter: "P",
-      name: "Problem",
-      blurb: "Criteria and limits",
-      subs: [
+      "letter": "P",
+      "name": "Problem",
+      "blurb": "Criteria and limits",
+      "subs": [
         {
-          title: "What the design has to do",
-          cols: 2,
-          blocks: [
+          "title": "What the design has to do",
+          "cols": 2,
+          "blocks": [
             {
-              type: "list",
-              items: [
+              "type": "list",
+              "items": [
                 "Creative and unique enough to appeal to an investor",
                 "The egg survives the fall without cracking",
                 "The product stays in one piece after landing",
@@ -63,8 +58,8 @@ const DEFAULT_CONTENT = {
               ]
             },
             {
-              type: "list",
-              items: [
+              "type": "list",
+              "items": [
                 "Only 3 A4 sheets of cardstock",
                 "Only one arm's length of tape (Ms. Navea's arm)",
                 "A quarter of the egg visible in the package",
@@ -76,38 +71,84 @@ const DEFAULT_CONTENT = {
         }
       ]
     },
-
     {
-      letter: "I",
-      name: "Investigation",
-      blurb: "Physics, research and sketches",
-      subs: [
+      "letter": "I",
+      "name": "Investigation",
+      "blurb": "Physics, research and sketches",
+      "subs": [
         {
-          title: "The physics",
-          cols: 2,
-          blocks: [
-            { type: "formula", big: "F = m × a", caption: "The force on an object equals its mass times its acceleration." },
-            { type: "text", text: "Mass is fixed — an egg is an egg. So the only way to lower the force on the shell is to lower the acceleration, and the way to do that is to stretch out the stop. A slower fall and a squishier landing both buy time, and more time means less force." }
-          ]
-        },
-        {
-          title: "Past solutions",
-          cols: 2,
-          blocks: [
-            { type: "image", src: "", alt: "Cone design with straw legs", caption: "Design 1 — paper cone with straw legs that fold on impact." },
-            { type: "image", src: "", alt: "Straw cage design", caption: "Design 2 — straw cage that holds the egg away from every wall." },
-            { type: "image", src: "", alt: "Parachute design", caption: "Design 3 — small parachute that slows the whole thing down." }
-          ]
-        },
-        {
-          title: "Our sketches",
-          cols: 2,
-          blocks: [
-            { type: "image", src: "", alt: "Aayush's sketch", caption: "Aayush: parachute over a deep cardstock bucket." },
-            { type: "image", src: "", alt: "Kunj's sketch", caption: "Kunj: 11 inch canopy over a narrow cone, 8.5 inches tall." },
+          "title": "The physics",
+          "cols": 2,
+          "blocks": [
             {
-              type: "list",
-              items: [
+              "type": "formula",
+              "big": "F = m × a",
+              "caption": "The force on an object equals its mass times its acceleration."
+            },
+            {
+              "type": "text",
+              "text": "Mass is fixed, an egg is an egg. So the only way to lower the force on the shell is to lower the acceleration, and the way to do that is to stretch out the stop. A slower fall and a squishier landing both buy time, and more time means less force."
+            }
+          ]
+        },
+        {
+          "title": "HOW THE PHYSICS AFFECT THE DESIGN",
+          "cols": 2,
+          "blocks": [
+            {
+              "type": "text",
+              "text": "To pull this off, most designs try to slow down the drop with air resistance, like using a parachute so it hits with less speed. Another main strategy is building crumple zones with parts that purposely bend or crush to soak up the crash energy before it even reaches the egg. It also really helps to spread out the impact over a bigger contact area so there is way less pressure on any single spot of the shell. Also, I have to make sure the egg itself doesn't fall out of the product and break, and making the product useless."
+            }
+          ]
+        },
+        {
+          "title": "Past solutions",
+          "cols": 2,
+          "blocks": [
+            {
+              "type": "image",
+              "src": "image.png",
+              "alt": "Cone design with straw legs",
+              "caption": "Design 1 — paper cone with straw legs that stop the leg from hitting the ground through the cardstock"
+            },
+            {
+              "type": "image",
+              "src": "Copy of The Egg Droppin' Challenge.png",
+              "alt": "Straw cage design",
+              "caption": "Design 2 — straw cage that holds the egg away surfaces."
+            },
+            {
+              "type": "image",
+              "src": "Copy of The Egg Droppin' Challenge (1).png",
+              "alt": "Parachute design",
+              "caption": "Design 3 — small parachute that slows the whole thing down."
+            },
+            {
+              "type": "text",
+              "text": "Each of these designs uses a specific method to reduce the force of impact. The first of these, shown in image 1, is a cone that will crumple slightly to take most of the impact, while its protruding arms catch it as it lands to stop the egg from falling out and cracking. The second, seen in image 2, uses a matrix of straws with protruding arms structured to take the force and distribute it. The design in image 3 uses a parachute to create drag and reduce the speed of the falling egg.",
+              "span": "full"
+            }
+          ]
+        },
+        {
+          "title": "Our sketches",
+          "cols": 2,
+          "blocks": [
+            {
+              "type": "image",
+              "src": "",
+              "alt": "Aayush's sketch",
+              "caption": "Aayush: parachute over a deep cardstock bucket."
+            },
+            {
+              "type": "image",
+              "src": "",
+              "alt": "Kunj's sketch",
+              "caption": "Kunj: 11 inch canopy over a narrow cone, 8.5 inches tall."
+            },
+            {
+              "type": "list",
+              "items": [
                 "Both ideas slow the fall, which softens the landing speed",
                 "Both are light, so there is less energy to get rid of",
                 "Weakness in both: very little protection if the landing is still hard"
@@ -116,178 +157,311 @@ const DEFAULT_CONTENT = {
           ]
         },
         {
-          title: "Choosing our design",
-          cols: 2,
-          blocks: [
+          "title": "Choosing our design",
+          "cols": 2,
+          "blocks": [
             {
-              type: "table",
-              head: ["Criteria", "Aayush", "Kunj", "Combined"],
-              rows: [
-                ["Cushions the impact", "5 / 5", "2 / 5", "5 / 5"],
-                ["Slows the fall", "1 / 5", "5 / 5", "4 / 5"],
-                ["Easy to build", "5 / 5", "3 / 5", "3 / 5"],
-                ["Uses few materials", "4 / 5", "3 / 5", "3 / 5"]
+              "type": "table",
+              "head": [
+                "Criteria",
+                "Aayush",
+                "Kunj",
+                "Combined"
+              ],
+              "rows": [
+                [
+                  "Cushions the impact",
+                  "5 / 5",
+                  "2 / 5",
+                  "5 / 5"
+                ],
+                [
+                  "Slows the fall",
+                  "1 / 5",
+                  "5 / 5",
+                  "4 / 5"
+                ],
+                [
+                  "Easy to build",
+                  "5 / 5",
+                  "3 / 5",
+                  "3 / 5"
+                ],
+                [
+                  "Uses few materials",
+                  "4 / 5",
+                  "3 / 5",
+                  "3 / 5"
+                ]
               ]
             },
-            { type: "text", text: "We combined both ideas: a padded capsule hanging under a small parachute. The parachute lowers the landing speed, and the padding protects the egg if the landing is still rough." }
+            {
+              "type": "text",
+              "text": "We combined both ideas: a padded capsule hanging under a small parachute. The parachute lowers the landing speed, and the padding protects the egg if the landing is still rough."
+            }
           ]
         }
       ]
     },
-
     {
-      letter: "C",
-      name: "Construction",
-      blurb: "How we built it",
-      subs: [
+      "letter": "C",
+      "name": "Construction",
+      "blurb": "How we built it",
+      "subs": [
         {
-          title: "How the final design works",
-          cols: 1,
-          blocks: [
+          "title": "How the final design works",
+          "cols": 1,
+          "blocks": [
             {
-              type: "cards",
-              items: [
-                { title: "Parachute", body: "Catches air and slows the fall." },
-                { title: "Suspension lines", body: "Keep the capsule hanging level so it lands flat." },
-                { title: "Outer shell", body: "Takes the first hit and keeps its shape." },
-                { title: "Padded egg seat", body: "Holds the egg still and soaks up the shock." }
+              "type": "cards",
+              "items": [
+                {
+                  "title": "Parachute",
+                  "body": "Catches air and slows the fall."
+                },
+                {
+                  "title": "Suspension lines",
+                  "body": "Keep the capsule hanging level so it lands flat."
+                },
+                {
+                  "title": "Outer shell",
+                  "body": "Takes the first hit and keeps its shape."
+                },
+                {
+                  "title": "Padded egg seat",
+                  "body": "Holds the egg still and soaks up the shock."
+                }
               ]
             }
           ]
         },
         {
-          title: "Materials and tools",
-          cols: 2,
-          blocks: [
+          "title": "Materials and tools",
+          "cols": 2,
+          "blocks": [
             {
-              type: "list",
-              items: [
+              "type": "list",
+              "items": [
                 "Cardstock — the outer shell and the canopy",
                 "Padding — soft cushioning around the egg",
                 "String — suspension lines",
                 "Tape — holds every seam together"
               ]
             },
-            { type: "list", items: ["Scissors", "Ruler", "Marker", "Hole punch"] }
-          ]
-        },
-        {
-          title: "Step by step",
-          cols: 1,
-          blocks: [
             {
-              type: "steps",
-              items: [
-                { title: "Build the shell", body: "Cut and fold the cardstock into a box with room around the egg." },
-                { title: "Add padding", body: "Line every wall and the floor so the egg cannot rattle." },
-                { title: "Make the parachute", body: "Cut the canopy, add four strings of equal length, tie them to the shell." },
-                { title: "Seal and check", body: "Place the egg, close the lid, tape the seams, untangle the lines." }
+              "type": "list",
+              "items": [
+                "Scissors",
+                "Ruler",
+                "Marker",
+                "Hole punch"
               ]
             }
           ]
         },
         {
-          title: "Problems and fixes",
-          cols: 1,
-          blocks: [
+          "title": "Step by step",
+          "cols": 1,
+          "blocks": [
             {
-              type: "pairs",
-              leftLabel: "What went wrong",
-              rightLabel: "What we did",
-              items: [
-                { left: "The egg rattled inside the shell.", right: "Added padding on every side until it sat snugly." },
-                { left: "The parachute strings tangled.", right: "Cut the strings to equal lengths and folded the canopy neatly." },
-                { left: "Tape peeled off the seams.", right: "Doubled the tape at the corners." }
+              "type": "steps",
+              "items": [
+                {
+                  "title": "Build the shell",
+                  "body": "Cut and fold the cardstock into a box with room around the egg."
+                },
+                {
+                  "title": "Add padding",
+                  "body": "Line every wall and the floor so the egg cannot rattle."
+                },
+                {
+                  "title": "Make the parachute",
+                  "body": "Cut the canopy, add four strings of equal length, tie them to the shell."
+                },
+                {
+                  "title": "Seal and check",
+                  "body": "Place the egg, close the lid, tape the seams, untangle the lines."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Problems and fixes",
+          "cols": 1,
+          "blocks": [
+            {
+              "type": "pairs",
+              "leftLabel": "What went wrong",
+              "rightLabel": "What we did",
+              "items": [
+                {
+                  "left": "The egg rattled inside the shell.",
+                  "right": "Added padding on every side until it sat snugly."
+                },
+                {
+                  "left": "The parachute strings tangled.",
+                  "right": "Cut the strings to equal lengths and folded the canopy neatly."
+                },
+                {
+                  "left": "Tape peeled off the seams.",
+                  "right": "Doubled the tape at the corners."
+                }
               ]
             }
           ]
         }
       ]
     },
-
     {
-      letter: "E",
-      name: "Evaluation",
-      blurb: "Testing, results and what we learned",
-      subs: [
+      "letter": "E",
+      "name": "Evaluation",
+      "blurb": "Testing, results and what we learned",
+      "subs": [
         {
-          title: "Testing and results",
-          cols: 2,
-          blocks: [
+          "title": "Testing and results",
+          "cols": 2,
+          "blocks": [
             {
-              type: "list",
-              items: [
+              "type": "list",
+              "items": [
                 "Dropped the device from the same height every time",
                 "Checked the egg for cracks and leaks after every drop",
                 "Wrote down what happened and what to change"
               ]
             },
             {
-              type: "table",
-              head: ["Trial", "Drop height", "Egg result", "What we saw"],
-              rows: [
-                ["1", "[height]", "[intact / cracked]", "[what happened]"],
-                ["2", "[height]", "[intact / cracked]", "[what happened]"],
-                ["3", "[height]", "[intact / cracked]", "[what happened]"],
-                ["Final", "[height]", "[intact / cracked]", "[what happened]"]
+              "type": "table",
+              "head": [
+                "Trial",
+                "Drop height",
+                "Egg result",
+                "What we saw"
+              ],
+              "rows": [
+                [
+                  "1",
+                  "[height]",
+                  "[intact / cracked]",
+                  "[what happened]"
+                ],
+                [
+                  "2",
+                  "[height]",
+                  "[intact / cracked]",
+                  "[what happened]"
+                ],
+                [
+                  "3",
+                  "[height]",
+                  "[intact / cracked]",
+                  "[what happened]"
+                ],
+                [
+                  "Final",
+                  "[height]",
+                  "[intact / cracked]",
+                  "[what happened]"
+                ]
               ]
             }
           ]
         },
         {
-          title: "Did we meet the criteria?",
-          cols: 1,
-          blocks: [
+          "title": "Did we meet the criteria?",
+          "cols": 1,
+          "blocks": [
             {
-              type: "table",
-              head: ["Criterion", "Met?", "Evidence"],
-              rows: [
-                ["The egg survives with no cracks or leaks", "[yes / no]", "Padding and parachute cut the impact on the shell"],
-                ["The device stays in one piece", "[yes / no]", "Taped seams and a stiff cardstock shell"],
-                ["Only the allowed materials were used", "[yes / no]", "3 sheets of cardstock and one arm's length of tape"],
-                ["A quarter of the egg stays visible", "[yes / no]", "Open window cut into the front of the shell"]
+              "type": "table",
+              "head": [
+                "Criterion",
+                "Met?",
+                "Evidence"
+              ],
+              "rows": [
+                [
+                  "The egg survives with no cracks or leaks",
+                  "[yes / no]",
+                  "Padding and parachute cut the impact on the shell"
+                ],
+                [
+                  "The device stays in one piece",
+                  "[yes / no]",
+                  "Taped seams and a stiff cardstock shell"
+                ],
+                [
+                  "Only the allowed materials were used",
+                  "[yes / no]",
+                  "3 sheets of cardstock and one arm's length of tape"
+                ],
+                [
+                  "A quarter of the egg stays visible",
+                  "[yes / no]",
+                  "Open window cut into the front of the shell"
+                ]
               ]
             }
           ]
         },
         {
-          title: "What worked well",
-          cols: 1,
-          blocks: [
+          "title": "What worked well",
+          "cols": 1,
+          "blocks": [
             {
-              type: "cards",
-              items: [
-                { title: "The parachute", body: "Slowed the fall and helped the shell land upright." },
-                { title: "The padding", body: "Held the egg still and absorbed the shock of landing." },
-                { title: "Testing early", body: "Trial drops showed us the problems before the real one." }
+              "type": "cards",
+              "items": [
+                {
+                  "title": "The parachute",
+                  "body": "Slowed the fall and helped the shell land upright."
+                },
+                {
+                  "title": "The padding",
+                  "body": "Held the egg still and absorbed the shock of landing."
+                },
+                {
+                  "title": "Testing early",
+                  "body": "Trial drops showed us the problems before the real one."
+                }
               ]
             },
-            { type: "banner", text: "A longer stop means a smaller force on the egg" }
+            {
+              "type": "banner",
+              "text": "A longer stop means a smaller force on the egg"
+            }
           ]
         },
         {
-          title: "What we would improve",
-          cols: 1,
-          blocks: [
+          "title": "What we would improve",
+          "cols": 1,
+          "blocks": [
             {
-              type: "pairs",
-              leftLabel: "Weak spot",
-              rightLabel: "Next version",
-              items: [
-                { left: "The parachute can drift or tangle.", right: "Use lighter, evenly spaced lines and pack the canopy carefully." },
-                { left: "Extra padding adds weight.", right: "Test a few padding thicknesses to find the balance." },
-                { left: "We only tested a few drops.", right: "Run more trials from different heights for steadier results." }
+              "type": "pairs",
+              "leftLabel": "Weak spot",
+              "rightLabel": "Next version",
+              "items": [
+                {
+                  "left": "The parachute can drift or tangle.",
+                  "right": "Use lighter, evenly spaced lines and pack the canopy carefully."
+                },
+                {
+                  "left": "Extra padding adds weight.",
+                  "right": "Test a few padding thicknesses to find the balance."
+                },
+                {
+                  "left": "We only tested a few drops.",
+                  "right": "Run more trials from different heights for steadier results."
+                }
               ]
             }
           ]
         },
         {
-          title: "What we learned",
-          cols: 1,
-          blocks: [
+          "title": "What we learned",
+          "cols": 1,
+          "blocks": [
             {
-              type: "list",
-              items: [
+              "type": "list",
+              "items": [
                 "Engineers protect fragile things by making impacts last longer and spreading the force out",
                 "The SPICE process kept us planning, building, testing and improving in order",
                 "Finding problems early made the final design stronger"
