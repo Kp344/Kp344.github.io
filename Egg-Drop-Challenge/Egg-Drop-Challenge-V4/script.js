@@ -159,30 +159,6 @@ const DEFAULT_CONTENT = {
               "caption": "Kunj: 2 inch cube made of cardstock with folded cardstock as padding inside."
             },
             {
-              "type": "image",
-              "src": "",
-              "alt": "Aayush's sketch",
-              "caption": "Aayush: parachute over a deep cardstock bucket."
-            },
-            {
-              "type": "image",
-              "src": "",
-              "alt": "Aayush's sketch",
-              "caption": "Aayush: parachute over a deep cardstock bucket."
-            },
-            {
-              "type": "image",
-              "src": "",
-              "alt": "Aayush's sketch",
-              "caption": "Aayush: parachute over a deep cardstock bucket."
-            },
-            {
-              "type": "image",
-              "src": "",
-              "alt": "Aayush's sketch",
-              "caption": "Aayush: parachute over a deep cardstock bucket."
-            },
-            {
               "type": "list",
               "items": [
                 "Both ideas slow the fall, which softens the landing speed",
