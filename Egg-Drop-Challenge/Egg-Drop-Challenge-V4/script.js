@@ -136,27 +136,27 @@ const DEFAULT_CONTENT = {
           "blocks": [
             {
               "type": "image",
-              "src": "",
+              "src": "be535359-381e-4a58-99b7-796492e6237e.jpg",
               "alt": "Kunj's sketch",
               "caption": "Kunj: 11 inch canopy over a narrow cone, 8.5 inches tall."
             },
             {
               "type": "image",
-              "src": "",
+              "src": "20260922_102312.jpg",
               "alt": "Kunj's sketch",
-              "caption": "Kunj: 11 inch canopy over a narrow cone, 8.5 inches tall."
+              "caption": "Kunj: A triangular \"prism\" made of rolled up cardstock(Made with half of one cardstock page), each straw 8.5 inches long, protecting the egg from direct impact."
             },
             {
               "type": "image",
-              "src": "",
+              "src": "20260922_102314.jpg",
               "alt": "Kunj's sketch",
-              "caption": "Kunj: 11 inch canopy over a narrow cone, 8.5 inches tall."
+              "caption": "Kunj: All 3 pages of cardstock wrapped around the egg to act as a cushion."
             },
             {
               "type": "image",
-              "src": "",
+              "src": "20260922_102317.jpg",
               "alt": "Kunj's sketch",
-              "caption": "Kunj: 11 inch canopy over a narrow cone, 8.5 inches tall."
+              "caption": "Kunj: 2 inch cube made of cardstock with folded cardstock as padding inside."
             },
             {
               "type": "image",
