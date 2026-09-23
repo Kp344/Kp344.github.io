@@ -157,14 +157,6 @@ const DEFAULT_CONTENT = {
               "src": "20260922_102317.jpg",
               "alt": "Kunj's sketch",
               "caption": "Kunj: 2 inch cube made of cardstock with folded cardstock as padding inside."
-            },
-            {
-              "type": "list",
-              "items": [
-                "Both ideas slow the fall, which softens the landing speed",
-                "Both are light, so there is less energy to get rid of",
-                "Weakness in both: very little protection if the landing is still hard"
-              ]
             }
           ]
         },
