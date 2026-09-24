@@ -223,43 +223,59 @@ const DEFAULT_CONTENT = {
               "items": [
                 "Dropped the device from the same height every time",
                 "Checked the egg for cracks and leaks after every drop",
-                "Wrote down what happened and what to change"
+                "Recorded what happened digitally"
               ]
             },
             {
               "type": "table",
               "head": [
-                "Trial",
+                "TESTS",
                 "Drop height",
                 "Egg result",
-                "What we saw"
+                "WHAT HAPPENED"
               ],
               "rows": [
                 [
-                  "1",
-                  "[height]",
-                  "[intact / cracked]",
-                  "[what happened]"
+                  "Prototype",
+                  "2nd floor",
+                  "Cracked",
+                  "Fell for 3 seconds, Egg was impacted directed"
                 ],
                 [
-                  "2",
-                  "[height]",
-                  "[intact / cracked]",
-                  "[what happened]"
-                ],
-                [
-                  "3",
-                  "[height]",
-                  "[intact / cracked]",
-                  "[what happened]"
-                ],
-                [
-                  "Final",
-                  "[height]",
-                  "[intact / cracked]",
-                  "[what happened]"
+                  "Final Product",
+                  "2nd floor",
+                  "Cracked",
+                  "Fell for 3 seconds, Egg was indirectly impacted"
                 ]
               ]
+            }
+          ]
+        },
+        {
+          "title": "My thoughts",
+          "cols": 2,
+          "blocks": [
+            {
+              "type": "text",
+              "text": "Prototype:<br>Our prototype design relied on the parachute working, but once we tested we saw that the whole prototype rotated because the parachute must not have been catching the air perfectly. The cone landed on its side, resulting in the egg still being impacted through the cardstock.<br><br>Final Product:<br>Our final design took a totally different approach. Instead of slowing down the egg over a longer time, we decided to absorb the impact into the product so the egg remains untouched. This did not work as we expected. Upon impact, the shock absorbers we made compressed too fast and did not distribute the impact, resulting in the egg again hitting the ground through the cardstock, BUT this design reduced the damage on the egg significantly, proving that our method could have worked, provided the right materials."
+            }
+          ]
+        },
+        {
+          "title": "PROTOTYPE VS FINAL PRODUCT",
+          "cols": 2,
+          "blocks": [
+            {
+              "type": "image",
+              "src": "",
+              "alt": "",
+              "caption": "Damage to the egg in the prototype"
+            },
+            {
+              "type": "image",
+              "src": "",
+              "alt": "",
+              "caption": "Damage to the egg in the final product"
             }
           ]
         },
@@ -277,30 +293,30 @@ const DEFAULT_CONTENT = {
               "rows": [
                 [
                   "The egg survives with no cracks or leaks",
-                  "[yes / no]",
-                  "Padding and parachute cut the impact on the shell"
+                  "[No]",
+                  "Padding was not sufficient and compressed too fast on impact"
                 ],
                 [
                   "The device stays in one piece",
-                  "[yes / no]",
+                  "[Yes]",
                   "Taped seams and a stiff cardstock shell"
                 ],
                 [
                   "Only the allowed materials were used",
-                  "[yes / no]",
-                  "3 sheets of cardstock and one arm's length of tape"
+                  "[Yes]",
+                  "3 sheets of cardstock and one Ms. Navea arm's length of tape"
                 ],
                 [
                   "A quarter of the egg stays visible",
-                  "[yes / no]",
-                  "Open window cut into the front of the shell"
+                  "[Yes]",
+                  "Top of the egg was visible through the insertion opening"
                 ]
               ]
             }
           ]
         },
         {
-          "title": "What worked well",
+          "title": "WHAT WORKED WELL: PROTOTYPE",
           "cols": 1,
           "blocks": [
             {
@@ -308,21 +324,32 @@ const DEFAULT_CONTENT = {
               "items": [
                 {
                   "title": "The parachute",
-                  "body": "Slowed the fall and helped the shell land upright."
-                },
-                {
-                  "title": "The padding",
-                  "body": "Held the egg still and absorbed the shock of landing."
+                  "body": "Slowed the fall and reduce impact speed"
                 },
                 {
                   "title": "Testing early",
-                  "body": "Trial drops showed us the problems before the real one."
+                  "body": "The trial drop showed us the problems before the real one."
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "title": "WHAT WORKED WELL: FINAL PRODUCT",
+          "cols": 1,
+          "blocks": [
             {
-              "type": "banner",
-              "text": "A longer stop means a smaller force on the egg"
+              "type": "cards",
+              "items": [
+                {
+                  "title": "THE SHOCK ABSORBERS",
+                  "body": "Took the brunt of the impact and reduced the damage to the egg"
+                },
+                {
+                  "title": "PLACING THE EGG DIRECTLY IN THE MIDDLE",
+                  "body": "Allowed for the egg to be safe from all sides and kept the center of gravity generally in the middle"
+                }
+              ]
             }
           ]
         },
@@ -336,16 +363,16 @@ const DEFAULT_CONTENT = {
               "rightLabel": "Next version",
               "items": [
                 {
-                  "left": "The parachute can drift or tangle.",
-                  "right": "Use lighter, evenly spaced lines and pack the canopy carefully."
+                  "left": "The parachute drifted. Landed on side, resulting in the egg hitting the ground",
+                  "right": ""
                 },
                 {
-                  "left": "Extra padding adds weight.",
-                  "right": "Test a few padding thicknesses to find the balance."
+                  "left": "Shock absorbers got compressed too fast, let the egg hit the ground through the cardstock",
+                  "right": "Use remaining cardstock to fill in the absorbers so that they dont compress all the way"
                 },
                 {
-                  "left": "We only tested a few drops.",
-                  "right": "Run more trials from different heights for steadier results."
+                  "left": "The design was not very intuitive.",
+                  "right": "What you changed"
                 }
               ]
             }
