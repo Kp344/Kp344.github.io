@@ -159,6 +159,51 @@ const DEFAULT_CONTENT = {
               "caption": "Kunj: 2 inch cube made of cardstock with folded cardstock as padding inside."
             }
           ]
+        },
+        {
+          "title": "Choosing our design",
+          "cols": 2,
+          "blocks": [
+            {
+              "type": "table",
+              "head": [
+                "Criteria",
+                "Aayush",
+                "Kunj",
+                "Combined"
+              ],
+              "rows": [
+                [
+                  "Cushions the impact",
+                  "5 / 5",
+                  "2 / 5",
+                  "5 / 5"
+                ],
+                [
+                  "Slows the fall",
+                  "1 / 5",
+                  "5 / 5",
+                  "4 / 5"
+                ],
+                [
+                  "Easy to build",
+                  "5 / 5",
+                  "3 / 5",
+                  "3 / 5"
+                ],
+                [
+                  "Uses few materials",
+                  "4 / 5",
+                  "3 / 5",
+                  "3 / 5"
+                ]
+              ]
+            },
+            {
+              "type": "text",
+              "text": "We combined both ideas: a padded capsule hanging under a small parachute. The parachute lowers the landing speed, and the padding protects the egg if the landing is still rough."
+            }
+          ]
         }
       ]
     },
@@ -168,12 +213,12 @@ const DEFAULT_CONTENT = {
       "blurb": "How we built it",
       "subs": [
         {
-          "title": "PROTOTYPE",
+          "title": "Prototype",
           "cols": 1,
           "blocks": [
             {
               "type": "image",
-              "src": "20260921_102409.jpg",
+              "src": "",
               "alt": "",
               "caption": "Caption for this photo."
             }
