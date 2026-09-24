@@ -257,7 +257,7 @@ const DEFAULT_CONTENT = {
           "blocks": [
             {
               "type": "text",
-              "text": "Prototype:\nOur prototype design relied on the parachute working, but once we tested we saw that the whole prototype rotated because the parachute must not have been catching the air perfectly. The cone landed on its side, resulting in the egg still being impacted through the cardstock.\nFinal Product:\nOur final design took a totally different approach. Instead of slowing down the egg over a longer time, we decided to absorb the impact into the product so the egg remains untouched. This did not work as we expected. Upon impact, the shock absorbers we made compressed too fast and did not distribute the impact, resulting in the egg again hitting the ground through the cardstock, BUT this design reduced the damage on the egg significantly, proving that our method could have worked, provided the right materials."
+              "text": "Prototype:\nOur prototype design relied on the parachute working, but once we tested we saw that the whole prototype rotated because the parachute must not have been catching the air perfectly. The cone landed on its side, resulting in the egg still being impacted through the cardstock.\n \nFinal Product:\nOur final design took a totally different approach. Instead of slowing down the egg over a longer time, we decided to absorb the impact into the product so the egg remains untouched. This did not work as we expected. Upon impact, the shock absorbers we made compressed too fast and did not distribute the impact, resulting in the egg again hitting the ground through the cardstock, BUT this design reduced the damage on the egg significantly, proving that our method could have worked, provided the right materials."
             }
           ]
         },
@@ -267,13 +267,13 @@ const DEFAULT_CONTENT = {
           "blocks": [
             {
               "type": "image",
-              "src": "",
+              "src": "20260922_101032.jpg",
               "alt": "",
               "caption": "Damage to the egg in the prototype"
             },
             {
               "type": "image",
-              "src": "",
+              "src": "sddefault.jpg",
               "alt": "",
               "caption": "Damage to the egg in the final product"
             }
