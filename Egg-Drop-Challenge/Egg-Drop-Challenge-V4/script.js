@@ -159,51 +159,6 @@ const DEFAULT_CONTENT = {
               "caption": "Kunj: 2 inch cube made of cardstock with folded cardstock as padding inside."
             }
           ]
-        },
-        {
-          "title": "Choosing our design",
-          "cols": 2,
-          "blocks": [
-            {
-              "type": "table",
-              "head": [
-                "Criteria",
-                "Aayush",
-                "Kunj",
-                "Combined"
-              ],
-              "rows": [
-                [
-                  "Cushions the impact",
-                  "5 / 5",
-                  "2 / 5",
-                  "5 / 5"
-                ],
-                [
-                  "Slows the fall",
-                  "1 / 5",
-                  "5 / 5",
-                  "4 / 5"
-                ],
-                [
-                  "Easy to build",
-                  "5 / 5",
-                  "3 / 5",
-                  "3 / 5"
-                ],
-                [
-                  "Uses few materials",
-                  "4 / 5",
-                  "3 / 5",
-                  "3 / 5"
-                ]
-              ]
-            },
-            {
-              "type": "text",
-              "text": "We combined both ideas: a padded capsule hanging under a small parachute. The parachute lowers the landing speed, and the padding protects the egg if the landing is still rough."
-            }
-          ]
         }
       ]
     },
@@ -213,105 +168,26 @@ const DEFAULT_CONTENT = {
       "blurb": "How we built it",
       "subs": [
         {
-          "title": "How the final design works",
+          "title": "PROTOTYPE",
           "cols": 1,
           "blocks": [
             {
-              "type": "cards",
-              "items": [
-                {
-                  "title": "Parachute",
-                  "body": "Catches air and slows the fall."
-                },
-                {
-                  "title": "Suspension lines",
-                  "body": "Keep the capsule hanging level so it lands flat."
-                },
-                {
-                  "title": "Outer shell",
-                  "body": "Takes the first hit and keeps its shape."
-                },
-                {
-                  "title": "Padded egg seat",
-                  "body": "Holds the egg still and soaks up the shock."
-                }
-              ]
+              "type": "image",
+              "src": "20260921_102409.jpg",
+              "alt": "",
+              "caption": "Caption for this photo."
             }
           ]
         },
         {
-          "title": "Materials and tools",
-          "cols": 2,
-          "blocks": [
-            {
-              "type": "list",
-              "items": [
-                "Cardstock — the outer shell and the canopy",
-                "Padding — soft cushioning around the egg",
-                "String — suspension lines",
-                "Tape — holds every seam together"
-              ]
-            },
-            {
-              "type": "list",
-              "items": [
-                "Scissors",
-                "Ruler",
-                "Marker",
-                "Hole punch"
-              ]
-            }
-          ]
-        },
-        {
-          "title": "Step by step",
+          "title": "Final Product",
           "cols": 1,
           "blocks": [
             {
-              "type": "steps",
-              "items": [
-                {
-                  "title": "Build the shell",
-                  "body": "Cut and fold the cardstock into a box with room around the egg."
-                },
-                {
-                  "title": "Add padding",
-                  "body": "Line every wall and the floor so the egg cannot rattle."
-                },
-                {
-                  "title": "Make the parachute",
-                  "body": "Cut the canopy, add four strings of equal length, tie them to the shell."
-                },
-                {
-                  "title": "Seal and check",
-                  "body": "Place the egg, close the lid, tape the seams, untangle the lines."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "title": "Problems and fixes",
-          "cols": 1,
-          "blocks": [
-            {
-              "type": "pairs",
-              "leftLabel": "What went wrong",
-              "rightLabel": "What we did",
-              "items": [
-                {
-                  "left": "The egg rattled inside the shell.",
-                  "right": "Added padding on every side until it sat snugly."
-                },
-                {
-                  "left": "The parachute strings tangled.",
-                  "right": "Cut the strings to equal lengths and folded the canopy neatly."
-                },
-                {
-                  "left": "Tape peeled off the seams.",
-                  "right": "Doubled the tape at the corners."
-                }
-              ]
+              "type": "image",
+              "src": "",
+              "alt": "",
+              "caption": "Caption for this photo."
             }
           ]
         }
