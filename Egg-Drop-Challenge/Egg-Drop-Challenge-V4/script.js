@@ -159,51 +159,6 @@ const DEFAULT_CONTENT = {
               "caption": "Kunj: 2 inch cube made of cardstock with folded cardstock as padding inside."
             }
           ]
-        },
-        {
-          "title": "Choosing our design",
-          "cols": 2,
-          "blocks": [
-            {
-              "type": "table",
-              "head": [
-                "Criteria",
-                "Aayush",
-                "Kunj",
-                "Combined"
-              ],
-              "rows": [
-                [
-                  "Cushions the impact",
-                  "5 / 5",
-                  "2 / 5",
-                  "5 / 5"
-                ],
-                [
-                  "Slows the fall",
-                  "1 / 5",
-                  "5 / 5",
-                  "4 / 5"
-                ],
-                [
-                  "Easy to build",
-                  "5 / 5",
-                  "3 / 5",
-                  "3 / 5"
-                ],
-                [
-                  "Uses few materials",
-                  "4 / 5",
-                  "3 / 5",
-                  "3 / 5"
-                ]
-              ]
-            },
-            {
-              "type": "text",
-              "text": "We combined both ideas: a padded capsule hanging under a small parachute. The parachute lowers the landing speed, and the padding protects the egg if the landing is still rough."
-            }
-          ]
         }
       ]
     },
@@ -214,25 +169,41 @@ const DEFAULT_CONTENT = {
       "subs": [
         {
           "title": "Prototype",
-          "cols": 1,
+          "cols": 2,
           "blocks": [
             {
               "type": "image",
-              "src": "",
+              "src": "Prototype pic.jpg",
               "alt": "",
-              "caption": "Caption for this photo."
+              "caption": "Photo of the Prototype(also Aayush)",
+              "span": "narrow"
+            },
+            {
+              "type": "embed",
+              "src": "https://youtube.com/shorts/YZT3ifzZXyg?feature=share",
+              "shape": "wide",
+              "caption": "Prototype test",
+              "span": "narrow"
             }
           ]
         },
         {
-          "title": "Final Product",
-          "cols": 1,
+          "title": "Final Design",
+          "cols": 2,
           "blocks": [
             {
               "type": "image",
-              "src": "",
+              "src": "20260924_095454.jpg",
               "alt": "",
-              "caption": "Caption for this photo."
+              "caption": "Photo of the Final Product",
+              "span": "narrow"
+            },
+            {
+              "type": "embed",
+              "src": "https://youtube.com/shorts/aUqE639X2QQ?feature=share",
+              "shape": "wide",
+              "caption": "Final Product test",
+              "span": "narrow"
             }
           ]
         }
