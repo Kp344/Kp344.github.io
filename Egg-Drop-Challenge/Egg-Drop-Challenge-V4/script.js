@@ -181,7 +181,7 @@ const DEFAULT_CONTENT = {
             {
               "type": "embed",
               "src": "https://youtube.com/shorts/YZT3ifzZXyg?feature=share",
-              "shape": "wide",
+              "shape": "square",
               "caption": "Prototype test",
               "span": "narrow"
             }
@@ -201,7 +201,7 @@ const DEFAULT_CONTENT = {
             {
               "type": "embed",
               "src": "https://youtube.com/shorts/aUqE639X2QQ?feature=share",
-              "shape": "wide",
+              "shape": "square",
               "caption": "Final Product test",
               "span": "narrow"
             }
