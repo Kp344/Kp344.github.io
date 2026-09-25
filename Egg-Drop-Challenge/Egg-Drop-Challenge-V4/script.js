@@ -364,11 +364,11 @@ const DEFAULT_CONTENT = {
               "items": [
                 {
                   "left": "Shock absorbers got compressed too fast, let the egg hit the ground through the cardstock",
-                  "right": "Use remaining cardstock to fill in the absorbers so that they dont compress all the way"
+                  "right": "Use remaining cardstock to fill in the absorbers so that they don't compress all the way"
                 },
                 {
                   "left": "The design was not very intuitive.",
-                  "right": "Make the proper egg placement more obvious by covering other possible placements and"
+                  "right": "Make the proper egg placement more obvious by covering other possible placements and adding icons/symbols instead of text"
                 }
               ]
             }
