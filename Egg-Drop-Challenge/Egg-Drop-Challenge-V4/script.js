@@ -131,32 +131,35 @@ const DEFAULT_CONTENT = {
           ]
         },
         {
-          "title": "Our sketches",
-          "cols": 2,
+          "title": "My sketches",
+          "cols": 3,
           "blocks": [
             {
               "type": "image",
               "src": "be535359-381e-4a58-99b7-796492e6237e.jpg",
               "alt": "Kunj's sketch",
-              "caption": "Kunj: 11 inch canopy over a narrow cone, 8.5 inches tall."
+              "caption": "11 inch canopy over a narrow cone, 8.5 inches tall.",
+              "span": "normal"
             },
             {
               "type": "image",
               "src": "20260922_102312.jpg",
               "alt": "Kunj's sketch",
-              "caption": "Kunj: A triangular \"prism\" made of rolled up cardstock(Made with half of one cardstock page), each straw 8.5 inches long, protecting the egg from direct impact."
+              "caption": "A triangular prism made of rolled up cardstock, protecting the egg.",
+              "span": "normal"
             },
             {
               "type": "image",
               "src": "20260922_102314.jpg",
               "alt": "Kunj's sketch",
-              "caption": "Kunj: All 3 pages of cardstock wrapped around the egg to act as a cushion."
+              "caption": "3 pages of cardstock wrapped around the egg to act as a cushion."
             },
             {
               "type": "image",
               "src": "20260922_102317.jpg",
               "alt": "Kunj's sketch",
-              "caption": "Kunj: 2 inch cube made of cardstock with folded cardstock as padding inside."
+              "caption": "2 inch cube made of cardstock with folded cardstock padding.",
+              "span": "normal"
             }
           ]
         }
@@ -211,7 +214,7 @@ const DEFAULT_CONTENT = {
     },
     {
       "letter": "E",
-      "name": "Evaluation",
+      "name": "PROTOTYPE: EVALUATION",
       "blurb": "Testing, results and what we learned",
       "subs": [
         {
@@ -349,7 +352,7 @@ const DEFAULT_CONTENT = {
     },
     {
       "letter": "E",
-      "name": "Evaluation",
+      "name": "FINAL PRODUCT: EVALUATION",
       "blurb": "Testing, results and what we learned",
       "subs": [
         {
