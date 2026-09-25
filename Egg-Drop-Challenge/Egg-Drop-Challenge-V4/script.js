@@ -239,6 +239,152 @@ const DEFAULT_CONTENT = {
                   "Prototype",
                   "2nd floor",
                   "Cracked",
+                  "Fell for 3 seconds, Egg was impacted directly"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "My thoughts: Prototype",
+          "cols": 2,
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Our prototype design relied on the parachute working",
+                "Whole prototype rotated because the parachute must not have been catching the air perfectly",
+                "The cone landed on its side",
+                "Egg still hit the floor"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "PROTOTYPE EGG DAMAGE",
+          "cols": 2,
+          "blocks": [
+            {
+              "type": "image",
+              "src": "20260922_101032.jpg",
+              "alt": "",
+              "caption": "Damage to the egg in the prototype",
+              "span": "normal"
+            }
+          ]
+        },
+        {
+          "title": "Did we meet the criteria?",
+          "cols": 1,
+          "blocks": [
+            {
+              "type": "table",
+              "head": [
+                "Criterion",
+                "Met?",
+                "Evidence"
+              ],
+              "rows": [
+                [
+                  "The egg survives with no cracks or leaks",
+                  "[No]",
+                  "The parachute did not slow down the prototype enough where the egg could survive the impact"
+                ],
+                [
+                  "The device stays in one piece",
+                  "[Yes]",
+                  "Taped seams and a stiff cardstock shell"
+                ],
+                [
+                  "Only the allowed materials were used",
+                  "[Yes]",
+                  "3 sheets of cardstock and one Ms. Navea arm's length of tape"
+                ],
+                [
+                  "A quarter of the egg stays visible",
+                  "[Yes]",
+                  "Top of the egg was visible through the insertion opening"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "WHAT WORKED WELL: PROTOTYPE",
+          "cols": 1,
+          "blocks": [
+            {
+              "type": "cards",
+              "items": [
+                {
+                  "title": "The parachute",
+                  "body": "Slowed the fall and reduce impact speed"
+                },
+                {
+                  "title": "Testing early",
+                  "body": "The trial drop showed us the problems before the real one."
+                },
+                {
+                  "title": "WEBSITE TEMPLATE",
+                  "body": "Allowed me to organize and display my SPICE process in a visually pleasing way."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "What we would improve",
+          "cols": 1,
+          "blocks": [
+            {
+              "type": "pairs",
+              "leftLabel": "Weak spot",
+              "rightLabel": "Next version",
+              "items": [
+                {
+                  "left": "The parachute started to drift and rotate meaning it was catching enough air to slow down the prototype",
+                  "right": "Research more on how parachutes work and improve how the parachute catches and glides through the air using the remaining cardstock"
+                },
+                {
+                  "left": "The design would tip over meaning the egg would still fall without the help of the parachute",
+                  "right": "Add some way for the  design to catch itself before it hits the ground fully, like sticks sticking out in four ways"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "letter": "E",
+      "name": "Evaluation",
+      "blurb": "Testing, results and what we learned",
+      "subs": [
+        {
+          "title": "Testing and results",
+          "cols": 2,
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Dropped the device from the same height every time",
+                "Checked the egg for cracks and leaks after every drop",
+                "Recorded what happened digitally"
+              ]
+            },
+            {
+              "type": "table",
+              "head": [
+                "TESTS",
+                "Drop height",
+                "Egg result",
+                "WHAT HAPPENED"
+              ],
+              "rows": [
+                [
+                  "Prototype",
+                  "2nd floor",
+                  "Cracked",
                   "Fell for 3 seconds, Egg was impacted directed"
                 ],
                 [
@@ -273,7 +419,7 @@ const DEFAULT_CONTENT = {
             },
             {
               "type": "image",
-              "src": "sddefault.jpg",
+              "src": "sddefault(modified).jpg",
               "alt": "",
               "caption": "Damage to the egg in the final product"
             }
@@ -370,21 +516,6 @@ const DEFAULT_CONTENT = {
                   "left": "The design was not very intuitive.",
                   "right": "Make the proper egg placement more obvious by covering other possible placements and adding icons/symbols instead of text"
                 }
-              ]
-            }
-          ]
-        },
-        {
-          "title": "What we learned",
-          "cols": 1,
-          "blocks": [
-            {
-              "type": "list",
-              "items": [
-                "Engineers protect fragile things by making impacts last longer and spreading the force out",
-                "The SPICE process kept us planning, building, testing and improving in order",
-                "Finding problems early made the final design stronger",
-                "In our situation it was shock absorption was more effective than reducing overall speed"
               ]
             }
           ]
