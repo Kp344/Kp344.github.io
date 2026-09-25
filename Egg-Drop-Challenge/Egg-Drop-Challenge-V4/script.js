@@ -175,7 +175,7 @@ const DEFAULT_CONTENT = {
               "type": "image",
               "src": "Prototype pic.jpg",
               "alt": "",
-              "caption": "Photo of the Prototype(also Aayush)",
+              "caption": "Photo of the Prototype (also Aayush)",
               "span": "narrow"
             },
             {
