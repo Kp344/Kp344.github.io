@@ -383,7 +383,8 @@ const DEFAULT_CONTENT = {
               "items": [
                 "Engineers protect fragile things by making impacts last longer and spreading the force out",
                 "The SPICE process kept us planning, building, testing and improving in order",
-                "Finding problems early made the final design stronger"
+                "Finding problems early made the final design stronger",
+                "In our situation it was shock absorption was more effective than reducing overall speed"
               ]
             }
           ]
