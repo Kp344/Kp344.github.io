@@ -167,7 +167,7 @@ const DEFAULT_CONTENT = {
     },
     {
       "letter": "C",
-      "name": "Construction",
+      "name": "PROTOTYPE: CONSTRUCTION",
       "blurb": "How we built it",
       "subs": [
         {
@@ -186,26 +186,6 @@ const DEFAULT_CONTENT = {
               "src": "https://youtube.com/shorts/YZT3ifzZXyg?feature=share",
               "shape": "tall",
               "caption": "Prototype test",
-              "span": "normal"
-            }
-          ]
-        },
-        {
-          "title": "Final Design",
-          "cols": 2,
-          "blocks": [
-            {
-              "type": "image",
-              "src": "20260924_095454.jpg",
-              "alt": "",
-              "caption": "Photo of the Final Product",
-              "span": "normal"
-            },
-            {
-              "type": "embed",
-              "src": "https://youtube.com/shorts/aUqE639X2QQ?feature=share",
-              "shape": "tall",
-              "caption": "Final Product test",
               "span": "normal"
             }
           ]
@@ -345,6 +325,33 @@ const DEFAULT_CONTENT = {
                   "right": "Add some way for the design to catch itself before it hits the ground fully, like sticks sticking out in four ways"
                 }
               ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "letter": "C",
+      "name": "FINAL DESIGN: CONSTRUCTION",
+      "blurb": "How we built it",
+      "subs": [
+        {
+          "title": "Final Design",
+          "cols": 2,
+          "blocks": [
+            {
+              "type": "image",
+              "src": "20260924_095454.jpg",
+              "alt": "",
+              "caption": "Photo of the Final Product",
+              "span": "normal"
+            },
+            {
+              "type": "embed",
+              "src": "https://youtube.com/shorts/aUqE639X2QQ?feature=share",
+              "shape": "tall",
+              "caption": "Final Product test",
+              "span": "normal"
             }
           ]
         }
