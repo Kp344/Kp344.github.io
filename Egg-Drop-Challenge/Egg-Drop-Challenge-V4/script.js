@@ -363,16 +363,12 @@ const DEFAULT_CONTENT = {
               "rightLabel": "Next version",
               "items": [
                 {
-                  "left": "The parachute drifted. Landed on side, resulting in the egg hitting the ground",
-                  "right": ""
-                },
-                {
                   "left": "Shock absorbers got compressed too fast, let the egg hit the ground through the cardstock",
                   "right": "Use remaining cardstock to fill in the absorbers so that they dont compress all the way"
                 },
                 {
                   "left": "The design was not very intuitive.",
-                  "right": "What you changed"
+                  "right": "Make the proper egg placement more obvious by covering other possible placements and"
                 }
               ]
             }
